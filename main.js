@@ -61,6 +61,7 @@ function createImageElement(url) {
       img         = document.createElement('img');
 
   img.setAttribute('src', url);
+  img.setAttribute('onerror', 'this.onerror=null;this.src="http://i.imgur.com/RqJ8P9w.png";')
   docFragment.appendChild(img);
 
   return docFragment;
